@@ -16,6 +16,9 @@ public class Arrays {
         System.out.println(nums[0]);
         displayArray();
         sumArray();
+        averageNum();
+        maxNum();
+        minNum();
     }
     //todo: make a display Array method that prints everything in the array nums.
 
@@ -32,6 +35,33 @@ public class Arrays {
         for(int q = 0; q< nums.length;q++){
             sum = sum + nums[q];
         }
-        System.out.println("The sum is " + sum);
+        System.out.println("The sum is: " + sum);
+    }
+    public void averageNum(){
+        int average = 0;
+
+        for(int w = 0; w<nums.length;w++){
+            average = (average +nums[w]);
+        }
+        average = average/nums.length;
+        System.out.println("This is the average: " + average);
+    }
+    public void maxNum(){
+        int maxNum = nums[0];
+        for(int p = 0; p<nums.length;p++){
+            if (nums[p]>maxNum){
+                maxNum = nums[p];
+            }
+        }
+        System.out.println("This is the biggest number: " + maxNum);
+    }
+    public void minNum(){
+        int minNum = nums[0];
+        for (int u = 0; u<nums.length; u++){
+            if(nums[u]<minNum){
+                minNum = nums[u];
+            }
+        }
+        System.out.println("This is this smallest number: " + minNum);
     }
 }
