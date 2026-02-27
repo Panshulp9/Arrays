@@ -19,6 +19,7 @@ public class Arrays {
         averageNum();
         maxNum();
         minNum();
+        maxIndex();
     }
     //todo: make a display Array method that prints everything in the array nums.
 
@@ -38,30 +39,46 @@ public class Arrays {
         System.out.println("The sum is: " + sum);
     }
     public void averageNum(){
-        int average = 0;
+        double add = 0.0;
+        double average = 0.0;
 
         for(int w = 0; w<nums.length;w++){
-            average = (average +nums[w]);
+            add = (add +nums[w]);
         }
-        average = average/nums.length;
+        average = add/nums.length;
         System.out.println("This is the average: " + average);
     }
     public void maxNum(){
-        int maxNum = nums[0];
+        int max = nums[0];
         for(int p = 0; p<nums.length;p++){
-            if (nums[p]>maxNum){
-                maxNum = nums[p];
+            if (nums[p]>max){
+                max = nums[p];
             }
         }
-        System.out.println("This is the biggest number: " + maxNum);
+        System.out.println("This is the biggest number: " + max);
     }
     public void minNum(){
-        int minNum = nums[0];
+        int min = nums[0];
         for (int u = 0; u<nums.length; u++){
-            if(nums[u]<minNum){
-                minNum = nums[u];
+            if(nums[u]<min){
+                min = nums[u];
             }
         }
-        System.out.println("This is this smallest number: " + minNum);
+        System.out.println("This is this smallest number: " + min);
+    }
+    //todo: make a method called maxIndex that finds the index aka bucket label that has the maximum number
+
+    public void maxIndex(){
+        int maxInd = nums[0];
+        int index = 0;
+        for(int t = 0; t<nums.length;t++){
+            if (nums[t]>maxInd){
+                maxInd = nums[t];
+                index = t;
+            }
+
+        }
+
+        System.out.println("This is the biggest bucket: " + index );
     }
 }
