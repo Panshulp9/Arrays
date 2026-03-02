@@ -20,6 +20,7 @@ public class Arrays {
         maxNum();
         minNum();
         maxIndex();
+        greaterThan50();
     }
     //todo: make a display Array method that prints everything in the array nums.
 
@@ -80,5 +81,15 @@ public class Arrays {
         }
 
         System.out.println("This is the biggest bucket: " + index );
+    }
+    public void greaterThan50(){
+        int greater = 0;
+        for(int h = 0; h<nums.length; h++){
+            if (nums[h]>= 50){
+                greater++;
+
+            }
+        }
+        System.out.println("This amount of numbers are greater than 50: " + greater);
     }
 }
