@@ -1,12 +1,58 @@
 public class Arrays {
     public int[] nums;
+    public Star[] stars;
 
     public static void main(String[] args) {
         System.out.println("Welcome to the awesome world of arrays!");
         new Arrays();
+
     }
     public Arrays (){
         nums = new int[10];
+        stars = new Star[7];
+        Star s1 = new Star();
+        nums[0] = 35;
+
+        //todo: change s1's color and points to be different
+        //todo: call printInfo again
+
+        s1.color = "Lilac";
+        s1.points = 19;
+        s1.printInfo();
+
+
+        for (int o = 0; o<stars.length;o++){
+            stars[o] = new Star();
+            int pointNum = (int)(Math.random()*11);
+            stars[o].points = pointNum;
+        }
+        System.out.println("experiment " + stars[3].points);
+
+
+
+
+        stars[0].color = "turkish blue";
+        stars[0].points = 31;
+
+
+        //todo: fill all the buckets in stars with stars
+        stars[1].color = "Yellow";
+        stars[2].color = "Egyptian blue";
+        stars[3].color = "Teal";
+        stars[4].color = "Crimson";
+        stars[5].color = "Maroon";
+        stars[6].color = "Silver";
+        stars[1].points = 4;
+        stars[2].points = 59;
+        stars[3].points = 99;
+        stars[4].points = 47;
+        stars[5].points = 81;
+        stars[6].points = 73;
+
+
+
+
+
         //todo: fill the array with random numbers 1-100
         for(int y = 0; y< nums.length;y++){
             int randomNum = (int)(Math.random()*100)+1;
@@ -21,6 +67,8 @@ public class Arrays {
         minNum();
         maxIndex();
         greaterThan50();
+        displayStars();
+
     }
     //todo: make a display Array method that prints everything in the array nums.
 
@@ -91,5 +139,20 @@ public class Arrays {
             }
         }
         System.out.println("This amount of numbers are greater than 50: " + greater);
+    }
+
+    //todo: make a displayStars method that uses the printInfo from star to print all the stars
+    public void displayStars(){
+        for (int c = 0; c < stars.length; c++){
+            stars[c].printInfo();
+        }
+
+        public void addPoints(){
+            int sumpoints = 0;
+            for (int r = 0; r < stars.length; r++){
+                sumpoints = stars[r].points;
+            }
+            stars[].printInfo
+        }
     }
 }
