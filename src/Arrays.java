@@ -32,7 +32,7 @@ public class Arrays {
 
 
         stars[0].color = "turkish blue";
-        stars[0].points = 31;
+       
 
 
         //todo: fill all the buckets in stars with stars
@@ -42,12 +42,6 @@ public class Arrays {
         stars[4].color = "Crimson";
         stars[5].color = "Maroon";
         stars[6].color = "Silver";
-        stars[1].points = 4;
-        stars[2].points = 59;
-        stars[3].points = 99;
-        stars[4].points = 47;
-        stars[5].points = 81;
-        stars[6].points = 73;
 
 
 
@@ -68,6 +62,7 @@ public class Arrays {
         maxIndex();
         greaterThan50();
         displayStars();
+        addPoints();
 
     }
     //todo: make a display Array method that prints everything in the array nums.
@@ -147,12 +142,12 @@ public class Arrays {
             stars[c].printInfo();
         }
 
-        public void addPoints(){
-            int sumpoints = 0;
-            for (int r = 0; r < stars.length; r++){
-                sumpoints = stars[r].points;
-            }
-            stars[].printInfo
+    }
+    public void addPoints(){
+        int sumpoints = 0;
+        for (int r = 0; r < stars.length; r++){
+            sumpoints = stars[r].points+sumpoints;
         }
+        System.out.println("This is the amount of points: " + sumpoints);
     }
 }
